@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>WorldWide Covid Datas</title>
+	<link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css">
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css">
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/fontawesome.min.css">
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/solid.min.css">
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+
+	<div class="loading">
+		<div class="lds-ripple"><div></div><div></div></div>
+	</div>
+
+	<div id="main">
+		<div class="bg-primary p-3">
+			<div class="container">
+				<div class="text-right text-white">updated covid info from <a class="text-warning" href="https://covid19.mathdro.id/api" target="_blank">https://covid19.mathdro.id/api</a></div>
+			</div>
+		</div>
+		<nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top">
+			<div class="container">
+				<a class="navbar-brand text-primary font-weight-bold" href="#">Covid19</a>
+				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+				<div class="collapse navbar-collapse" id="navbarNavDropdown">
+					<ul class="navbar-nav ml-auto">
+						<li class="nav-item active">
+							<a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#">Features</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#">Pricing</a>
+						</li>
+						<li class="nav-item dropdown">
+							<a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+								Dropdown link
+							</a>
+							<div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+								<a class="dropdown-item" href="#">Action</a>
+								<a class="dropdown-item" href="#">Another action</a>
+								<a class="dropdown-item" href="#">Something else here</a>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+
+		<div class="container">
+			<div class="row">
+				<div class="col-md-6">
+					<div class="py-5">
+						<h1 class="display-4">Hello, world!</h1>
+						<p class="lead">This site provide spreads of Covid 19 all over the world. Get updated number from your country everytime.</p>
+						<hr class="my-4">
+						<p>you can also see spreads of other countries here. Just pick one of country list below.</p>
+						<a class="btn btn-primary btn-lg" href="#spread" role="button">Discover Spreads</a>
+					</div>
+				</div>
+				<div class="col-md-6">
+					<img src="images/header.png" class="img-fluid">
+				</div>
+			</div>
+		</div>
+		<div id="spread" style="padding-top: 110px">
+			<div class="container">
+				<div class="row pt-5">
+					<div class="col-lg-9">
+						<div class="row">
+							<div class="col-md-12 mb-3">
+								<h3>Spreads of Covid19</h3>
+							</div>
+							<div class="col-md-4">
+								<div class="alert bg-warning text-white">
+									<p class="h4">Confirmed</p>
+									<div class="h1" id="confirmed"><i class="fas fa-spinner fa-spin"></i></div>
+									<p class="text-dark"><i>*positive Covid19</i></p>
+								</div>
+							</div>
+							<div class="col-md-4">
+								<div class="alert bg-success text-white">
+									<p class="h4">Recover</p>
+									<div class="h1" id="recovered"><i class="fas fa-spinner fa-spin"></i></div>
+									<p class="text-dark"><i>*recovered from Covid19</i></p>
+								</div>
+							</div>
+							<div class="col-md-4">
+								<div class="alert bg-danger text-white">
+									<p class="h4">Deaths</p>
+									<div class="h1" id="death"><i class="fas fa-spinner fa-spin"></i></div>
+									<p class="text-dark"><i>*deaths caused Covid19</i></p>
+								</div>
+							</div>
+							<div class="col-md-12 mt-2">
+								<div class="alert bg-secondary text-white">
+								<p>*Last updated at : <span id="update"><i class="fas fa-spinner fa-spin"></i></span></p>
+							</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-3">
+						<h3>Countries</h3>
+						<div class="list-group mt-3">
+							<span class="list-group-item list-group-item-action active" data-code="ID">
+								Indonesia
+							</span>
+							<span class="list-group-item list-group-item-action" data-code="IT">Italy</span>
+							<span class="list-group-item list-group-item-action" data-code="CN">China</span>
+							<span class="list-group-item list-group-item-action" data-code="US">USA</span>
+							<span class="list-group-item list-group-item-action" data-code="SG">Singapore</span>
+							<span class="list-group-item list-group-item-action" data-code="JP">Japan</span>
+						</div>
+					</div>
+				</div>		
+			</div>
+		</div>
+
+		<div class="my-5"></div>
+
+		<div class="container pt-5">
+			<h3>Latest News</h3>
+			<div class="mt-3" id="slider">
+				<div class="pr-4">
+					<div class="card">
+						<img src="https://awsimages.detik.net.id/community/media/visual/2020/03/30/b9795885-f90b-44c3-ba79-67129bb68f05_43.jpeg?w=700&q=90" class="card-img-top" alt="covid news">
+						<div class="card-body">
+							<h5 class="card-title">Card title</h5>
+							<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+							<a href="#" class="btn btn-primary">Go somewhere</a>
+						</div>
+					</div>
+				</div>
+				<div class="pr-4">
+					<div class="card">
+						<img src="https://awsimages.detik.net.id/community/media/visual/2020/03/30/b9795885-f90b-44c3-ba79-67129bb68f05_43.jpeg?w=700&q=90" class="card-img-top" alt="covid news">
+						<div class="card-body">
+							<h5 class="card-title">Card title</h5>
+							<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+							<a href="#" class="btn btn-primary">Go somewhere</a>
+						</div>
+					</div>
+				</div>
+				<div class="pr-4">
+					<div class="card">
+						<img src="https://awsimages.detik.net.id/community/media/visual/2020/03/30/b9795885-f90b-44c3-ba79-67129bb68f05_43.jpeg?w=700&q=90" class="card-img-top" alt="covid news">
+						<div class="card-body">
+							<h5 class="card-title">Card title</h5>
+							<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+							<a href="#" class="btn btn-primary">Go somewhere</a>
+						</div>
+					</div>
+				</div>
+				<div class="pr-4">
+					<div class="card">
+						<img src="https://awsimages.detik.net.id/community/media/visual/2020/03/30/b9795885-f90b-44c3-ba79-67129bb68f05_43.jpeg?w=700&q=90" class="card-img-top" alt="covid news">
+						<div class="card-body">
+							<h5 class="card-title">Card title</h5>
+							<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+							<a href="#" class="btn btn-primary">Go somewhere</a>
+						</div>
+					</div>
+				</div>
+				<div class="pr-4">
+					<div class="card">
+						<img src="https://awsimages.detik.net.id/community/media/visual/2020/03/30/b9795885-f90b-44c3-ba79-67129bb68f05_43.jpeg?w=700&q=90" class="card-img-top" alt="covid news">
+						<div class="card-body">
+							<h5 class="card-title">Card title</h5>
+							<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+							<a href="#" class="btn btn-primary">Go somewhere</a>
+						</div>
+					</div>
+				</div>
+				<div class="pr-4">
+					<div class="card">
+						<img src="https://awsimages.detik.net.id/community/media/visual/2020/03/30/b9795885-f90b-44c3-ba79-67129bb68f05_43.jpeg?w=700&q=90" class="card-img-top" alt="covid news">
+						<div class="card-body">
+							<h5 class="card-title">Card title</h5>
+							<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+							<a href="#" class="btn btn-primary">Go somewhere</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="my-5"></div>
+
+		<div class="bg-dark">
+			<div class="container py-5 text-white">
+				<p>&copy; Covid19 2020 by Mfdsix</p>
+			</div>
+		</div>
+	</div>
+
+	<script src="js/jquery.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/moment.min.js"></script>
+	<script src="js/moment-with-locales.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/numeral.js/2.0.6/numeral.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
+	<script src="js/app.js"></script>
+</body>
+</html>
